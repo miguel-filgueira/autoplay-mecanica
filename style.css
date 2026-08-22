@@ -1,187 +1,731 @@
-:root {
-    --cor-fundo: #060B10;
-    --cor-secao: #151A1F;
-    --cor-card: #20262C;
-    --cor-borda: #3A4148;
-
-    --cor-texto: #FFFFFF;
-    --cor-texto-secundario: #8e9295;
-
-    --cor-destaque: #E31B23;
-    --cor-hover: #FF252D;
-}
-*{
-    padding: 0px;
-    margin: 0px;
+:root { 
+    --cor-fundo: #060B10; 
+    --cor-secao: #151A1F; 
+    --cor-card: #20262C; 
+    --cor-borda: #3A4148; 
+ 
+    --cor-texto: #FFFFFF; 
+    --cor-texto-secundario: #8e9295; 
+ 
+    --cor-destaque: #E31B23; 
+    --cor-hover: #FF252D; 
 }
 
-body{
-   background-color: var(--cor-fundo); 
-   color: var(--cor-texto);
+
+/* CONFIGURAÇÕES GERAIS */
+
+*{ 
+    padding: 0px; 
+    margin: 0px; 
+} 
+ 
+body{ 
+   background-color: var(--cor-fundo);  
+   color: var(--cor-texto); 
 }
 
-header{
+
+/* HEADER */
+
+header{ 
+    display: flex;  
+}
+
+
+/* LOGO */
+
+.fa-gear { 
+    color: var(--cor-destaque); 
+    font-size: 30px; 
+} 
+ 
+.logo{ 
+    flex-direction: column; 
+    margin-left: 20px; 
+    margin-top: 10px; 
+} 
+ 
+.logo h1{ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 40px; 
+    margin: 0; 
+} 
+ 
+.logo p{ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 15px; 
+    margin: 0; 
+    margin-left: 55px; 
+    margin-top: -5px; 
+} 
+ 
+span{ 
+    color: var(--cor-destaque); 
+}
+
+
+/* MENU */
+
+nav{ 
+    margin-left: auto; 
+    margin-top: 20px; 
+    margin-right: 20px; 
+} 
+ 
+nav a{ 
+    text-decoration: none; 
+    margin: 10px; 
+} 
+ 
+nav a:hover{ 
+    background-color: var(--cor-hover); 
+    transition: background-color 0.5s ease; 
+    padding: 10px; 
+    border-radius: 10px; 
+}
+
+
+/* IMAGENS */
+
+img{ 
+    background-color: var(--cor-fundo); 
+    width: 100%; 
+}
+
+
+/* IMAGEM DO CARRO */
+
+.carro2 img{ 
+    background-color: var(--cor-fundo); 
+    width: 100%; 
+    height: 550px; 
+    object-fit: cover; 
+    object-position: center; 
     display: flex; 
 }
 
-.fa-gear {
-    color: var(--cor-destaque);
-    font-size: 30px;
+
+/* SEÇÕES */
+
+section{ 
+    position: relative; 
 }
 
-.logo{
-    flex-direction: column;
-    margin-left: 20px;
-    margin-top: 10px;
+
+/* TEXTO DA IMAGEM DO CARRO */
+
+.titulo { 
+    position: absolute; 
+    top: 60px; 
+    left: 80px; 
+    z-index: 2; 
+} 
+ 
+.titulo h1{ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 45px; 
+} 
+ 
+.titulo h2{ 
+    color: var(--cor-texto-secundario); 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 32px; 
+} 
+ 
+.titulo p{ 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
 }
 
-.logo h1{
+
+/* LINKS */
+
+a{ 
+    text-decoration: none; 
+    display: inline-block; 
+    color: white; 
+    margin: 10px 10px 10px 0px; 
+} 
+ 
+a:hover{ 
+    background-color: var(--cor-hover); 
+    transition: background-color 0.5s ease; 
+    padding: 10px; 
+    border-radius: 10px; 
+}
+
+
+/* SEÇÃO NOSSOS SERVIÇOS - PÁGINA INICIAL */
+
+.servicos{ 
+    background-color: var(--cor-secao); 
+} 
+ 
+.titulo-servicos{ 
+    color: var(--cor-texto); 
+    text-align: center; 
+} 
+ 
+.artigos{ 
+    display: flex; 
+    justify-content: space-evenly; 
+}
+
+
+/* CARDS DE SERVIÇOS - PÁGINA INICIAL */
+
+.card-servicos{ 
+    text-align: center; 
+    width: 220px; 
+    height: 160px; 
+    aspect-ratio: 151/120; 
+    border-radius: 10px; 
+    border: 1px solid var(--cor-borda); 
+    margin: 35px; 
+} 
+ 
+.card-servicos h2{ 
+    color: var(--cor-texto); 
+    text-align: center; 
+    font-family: Inter; 
+    font-size: 25px; 
+    font-style: normal; 
+    font-weight: 700; 
+    line-height: normal; 
+    letter-spacing: 0.6px; 
+} 
+ 
+.card-servicos p{ 
+    font-size: 15px; 
+    margin-top: 5px; 
+} 
+ 
+.card-servicos i, 
+.card-servicos svg{ 
+    color: var(--cor-destaque); 
+    fill: var(--cor-destaque); 
+    margin-top: 15px; 
+    font-size: 35px; 
+} 
+ 
+.card-servicos { 
+    background-color: var(--cor-card); 
+}
+
+
+/* INFORMAÇÕES - SOBRE NÓS / CONTATO / HORÁRIO */
+
+.informacoes{ 
+    display: flex; 
+    justify-content: space-around; 
+} 
+ 
+.card-informacoes{ 
+    width: 300px; 
+    border-radius: 10px; 
+    margin-right: 300px; 
+    margin: 20px; 
+}
+
+
+/* FOOTER */
+
+footer { 
+    text-align: center; 
+    background-color: var(--cor-secao); 
+}
+
+
+/* ==========================================
+   PÁGINA DE SERVIÇOS
+========================================== */
+
+
+/* TOPO DA PÁGINA DE SERVIÇOS */
+
+.servicos-topo {
+    background-color: var(--cor-secao);
+    text-align: center;
+    padding: 70px 20px;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.servicos-topo h1 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    margin: 0;
+    font-size: 42px;
+    color: var(--cor-texto);
+    margin-bottom: 10px;
 }
 
-.logo p{
+.servicos-topo p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-    margin: 0;
-    margin-left: 55px;
-    margin-top: -5px;
-}
-
-span{
-    color: var(--cor-destaque);
-}
-
-nav{
-    margin-left: auto;
-    margin-top: 20px;
-    margin-right: 20px;
-}
-
-nav a{
-    text-decoration: none;
-    margin: 10px;
-}
-
-nav a:hover{
-    background-color: var(--cor-hover);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-
-img{
-    background-color: var(--cor-fundo);
-    width: 100%;
-}
-
-section{
-    position: relative;
-}
-
-.titulo {
-    position: absolute;
-    top: 60px;
-    left: 80px;
-    z-index: 2;
-}
-
-.titulo h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 45px;
-}
-
-.titulo h2{
+    font-size: 18px;
     color: var(--cor-texto-secundario);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 32px;
-}
-
-.titulo p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
 }
 
 
-a{
-    text-decoration: none;
-    display: inline-block;
-    color: white;
-    margin: 10px 10px 10px 0px;
-}
+/* ÁREA DOS SERVIÇOS */
 
-a:hover{
-    background-color: var(--cor-hover);
-    padding: 10px;
-    border-radius: 10px;
-}
+.lista-servicos {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 30px;
 
-.servicos{
-    background-color: var(--cor-secao);
-}
-
-.titulo-servicos{
-    color: var(--cor-texto);
-    text-align: center;
-}
-
-.artigos{
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
-.card-servicos{
-    text-align: center;
-    width: 220px;
-    height: 160px;
-    aspect-ratio: 151/120;
-    border-radius: 10px;
-    border: 1px solid var(--cor-borda);
-    margin: 35px;
-}
 
-.card-servicos h2{
-    color: var(--cor-texto);
-    text-align: center;
-    font-family: Inter;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.6px;
-}
+/* CARD DETALHADO DE CADA SERVIÇO */
 
-.card-servicos p{
-    font-size: 15px;
-    margin-top: 5px;
-}
-
-.card-servicos i,
-.card-servicos svg{
-    color: var(--cor-destaque);
-    fill: var(--cor-destaque);
-    margin-top: 15px;
-    font-size: 35px;
-}
-
-.card-servicos {
+.servico-detalhado {
     background-color: var(--cor-card);
+
+    width: 420px;
+    padding: 30px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+
+    transition: 0.3s;
 }
 
-.informacoes{
-    display: flex;
-    justify-content: space-around;
+
+/* EFEITO DO CARD */
+
+.servico-detalhado:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-destaque);
 }
 
-.card-informacoes{
-    width: 300px;
-    border-radius: 10px;
-    margin-right: 300px;
-    margin: 20px;
+
+/* ÍCONE DO SERVIÇO */
+
+.servico-detalhado i {
+    color: var(--cor-destaque);
+    font-size: 38px;
+    margin-bottom: 20px;
 }
 
-footer {
-    text-align: center;
+
+/* TÍTULO DO SERVIÇO */
+
+.servico-detalhado h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+
+/* DESCRIÇÃO DO SERVIÇO */
+
+.servico-detalhado p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-texto-secundario);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+/* LISTA DO SERVIÇO */
+
+.servico-detalhado ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.servico-detalhado li {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 8px 0;
+}
+
+.servico-detalhado li::before {
+    content: "✓";
+    color: var(--cor-destaque);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+
+/* BOTÃO AGENDAR DO CARD */
+
+.servico-detalhado a {
+    background-color: var(--cor-destaque);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.servico-detalhado a:hover {
+    background-color: var(--cor-hover);
+}
+
+
+/* SEÇÃO FINAL DA PÁGINA DE SERVIÇOS */
+
+.ajuda-servicos {
     background-color: var(--cor-secao);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.ajuda-servicos h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.ajuda-servicos p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor-texto-secundario);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.ajuda-servicos a {
+    background-color: var(--cor-destaque);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ajuda-servicos a:hover {
+    background-color: var(--cor-hover);
+}
+
+
+/* RESPONSIVIDADE DA PÁGINA DE SERVIÇOS */
+
+@media (max-width: 768px) {
+
+    .servicos-topo {
+        padding: 50px 20px;
+    }
+
+    .servicos-topo h1 {
+        font-size: 32px;
+    }
+
+    .lista-servicos {
+        padding: 40px 20px;
+    }
+
+    .servico-detalhado {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   PÁGINA DE Sobre Nós
+========================================== */
+
+.informacoes-1 {
+    border: 2px solid var(--cor-borda);
+    background-color: var(--cor-borda);
+    border-radius: 40px 50px 50px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 60px auto;
+    gap: 60px;
+}
+
+.informacoes-2{
+    border: 2px solid  var(--cor-borda);
+    background-color: var(--cor-borda);
+    border-radius: 40px 50px 50px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 60px auto;
+    gap: 60px;
+    flex-direction: row-reverse;
+}
+
+.informacoes-1 img{
+    height: 350px;
+    width: 400px;
+    border-radius: 40px 0px 0px 40px;
+}
+
+.informacoes-2 img{
+    display: flex;
+    height: 350px;
+    width: 450px;
+    border-radius: 0px 40px 40px 0px;
+}
+
+.texto-informacoes{
+    padding: 50px;
+}
+
+.texto-informacoes {
+    padding: 50px;
+}
+
+.texto-informacoes h2{
+    margin-bottom: 10px;
+}
+
+.texto-informacoes h1{
+    margin-bottom: 30px;
+}
+
+.texto-informacoes p {
+    line-height: 1.5;
+}
+
+.infos{
+    background-color: #3a414834;
+    display: flex; 
+    justify-content: space-around; 
+}
+
+
+.card-infos {
+    background-color: #67717a3b;
+    padding: 20px;
+    border: 1px solid var(--cor-borda);
+    width: 300px; 
+    border-radius: 10px; 
+    margin-right: 300px; 
+    margin: 20px; 
+}
+
+/* ==========================================
+   PÁGINA DE CONTATO
+========================================== */
+
+.area-contato{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+
+/* CAIXA DAS INFORMAÇÕES */
+
+.contato-informacoes{
+    background-color: var(--cor-card);
+
+    width: 400px;
+    padding: 30px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+}
+
+.contato-informacoes h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+}
+
+.contato-informacoes > p{
+    color: var(--cor-texto-secundario);
+    margin-bottom: 25px;
+}
+
+
+/* CADA INFORMAÇÃO */
+
+.contato-item{
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.contato-item i{
+    color: var(--cor-destaque);
+    font-size: 25px;
+}
+
+.contato-item h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contato-item p{
+    color: var(--cor-texto-secundario);
+}
+
+
+/* FORMULÁRIO */
+
+.formulario-contato{
+    background-color: var(--cor-card);
+
+    width: 400px;
+    padding: 30px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+}
+
+.formulario-contato h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.formulario-contato form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-contato label{
+    margin-bottom: 5px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea{
+    background-color: var(--cor-secao);
+    color: white;
+
+    padding: 10px;
+    margin-bottom: 15px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 7px;
+}
+
+.formulario-contato textarea{
+    height: 100px;
+}
+
+
+/* BOTÃO ENVIAR */
+
+.formulario-contato button{
+    background-color: var(--cor-destaque);
+    color: white;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.formulario-contato button:hover{
+    background-color: var(--cor-hover);
+}
+
+
+/* PARTE DO AGENDAMENTO */
+
+.contato-agendamento{
+    background-color: var(--cor-secao);
+
+    text-align: center;
+    padding: 50px;
+}
+
+.contato-agendamento h2{
+    margin-bottom: 10px;
+}
+
+.contato-agendamento p{
+    color: var(--cor-texto-secundario);
+    margin-bottom: 15px;
+}
+
+.contato-agendamento a{
+    background-color: var(--cor-destaque);
+
+    padding: 12px 20px;
+    border-radius: 7px;
+}
+
+/* ==========================================
+   PÁGINA DE AGENDAMENTO
+========================================== */
+
+.agendamento{
+    display: flex;
+    justify-content: center;
+
+    margin: 50px;
+}
+
+.caixa-agendamento{
+    width: 450px;
+
+    background-color: var(--cor-card);
+
+    padding: 30px;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+}
+
+.caixa-agendamento h2{
+    margin-bottom: 20px;
+}
+
+.caixa-agendamento form{
+    display: flex;
+    flex-direction: column;
+}
+
+.caixa-agendamento label{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.caixa-agendamento input{
+    padding: 10px;
+
+    background-color: var(--cor-secao);
+    color: white;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+.caixa-agendamento select{
+    padding: 10px;
+
+    background-color: var(--cor-secao);
+    color: white;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+.caixa-agendamento textarea{
+    height: 80px;
+
+    background-color: var(--cor-secao);
+    color: white;
+
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+}
+
+.caixa-agendamento button{
+    margin-top: 20px;
+
+    padding: 10px;
+
+    background-color: var(--cor-destaque);
+    color: white;
+
+    border: none;
+    border-radius: 5px;
 }
