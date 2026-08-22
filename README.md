@@ -32,7 +32,7 @@ Além do desenvolvimento do site, o projeto também está sendo utilizado para c
 
 🌐 **Acesse o site:**
 
-### 👉 [Abrir AutoPlay Centro Automotivo](https://miguel-filgueira.github.io/autoplay-mecanica/servicos.html)
+### 👉 [Abrir AutoPlay Centro Automotivo](https://miguel-filgueira.github.io/autoplay-mecanica)
 
 ---
 
