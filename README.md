@@ -28,14 +28,6 @@ Além do desenvolvimento do site, o projeto também está sendo utilizado para c
 
 ---
 
-## 🖥️ Demonstração
-
-🌐 **Acesse o site:**
-
-### 👉 [Abrir AutoPlay Centro Automotivo](https://miguel-filgueira.github.io/autoplay-mecanica)
-
----
-
 ## ✨ Funcionalidades
 
 - 🏠 Página inicial com apresentação da oficina
